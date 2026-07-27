@@ -1,0 +1,78 @@
+# ==========================================
+# RAREngine .gitignore
+# ==========================================
+
+# Build directory
+build/
+cmake-build-*/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+
+# Object files
+*.o
+*.obj
+*.lo
+*.slo
+
+# Dependency files
+*.d
+
+# Libraries
+*.a
+*.la
+*.so
+*.so.*
+*.dll
+*.dylib
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+RAREngine
+
+# Debug symbols
+*.pdb
+
+# Editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Temporary
+tmp/
+temp/
+
+# Backup files
+*.bak
+*.old
+
+# ==========================================
+# KEEP THESE
+# ==========================================
+#!assets/
+#!external/
+#!include/
+#!src/
