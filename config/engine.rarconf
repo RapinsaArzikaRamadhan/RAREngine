@@ -1,0 +1,15 @@
+# RAREngine Configuration
+
+[Window]
+
+width=1280
+height=400
+title=RAREngine
+
+[Engine]
+
+target_fps=60
+
+[Graphics]
+
+vsync=true
