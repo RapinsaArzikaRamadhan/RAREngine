@@ -1,5 +1,6 @@
 #include "RAREngine/Core/Engine.hpp"
 #include "RAREngine/Core/Config.hpp"
+#include "RAREngine/Core/Input.hpp"
 #include <raylib.h>
 
 namespace RAREngine
@@ -43,6 +44,35 @@ void Engine::Run()
 void Engine::Update()
 {
     testX += 100 *Time::GetDeltaTime();
+
+    if (Input::IsKeyPressed(KEY_SPACE))
+    {
+        TraceLog(LOG_INFO,"Space Pressed");
+    }
+
+    if (Input::IsKeyDown(KEY_A))
+    {
+        TraceLog(LOG_INFO,
+            "Delta Time: %.5f",
+        Time::GetDeltaTime()    
+        );
+    }
+    
+    if (Input::IsKeyDown(KEY_S))
+    {
+        TraceLog(LOG_INFO,"s Pressed");
+    }
+
+    if (Input::IsKeyDown(KEY_W))
+    {
+        TraceLog(LOG_INFO,"w Pressed");
+    }
+
+    if (Input::IsKeyDown(KEY_D))
+    {
+        TraceLog(LOG_INFO,"d Pressed");
+    }
+    
 }
 
 void Engine::Render()
