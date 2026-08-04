@@ -14,13 +14,13 @@ Engine::Engine()
     );
 
     InitWindow(
-        Config::GetInt("Window.width"),
-        Config::GetInt("Window.height"),
-        Config::GetString("Window.title").c_str()
+        Config::GetInt("Window.width", 600),
+        Config::GetInt("Window.height", 400),
+        Config::GetString("Window.title", "RARTest").c_str()
     );
 
     SetTargetFPS(
-        Config::GetInt("Engine.target_fps")
+        Config::GetInt("Engine.target_fps", 24)
     );
 }
 

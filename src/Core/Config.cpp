@@ -72,23 +72,38 @@ bool Config::Load(const std::string& path)
 }
 
 std::string Config::GetString(
-    const std::string& key
+    const std::string& key,
+    const std::string& defaultValue
 )
 {
+    if (values.find(key) == values.end())
+    {
+        return defaultValue;
+    }
+    
+    if (values[key].empty())
+    {
+        return defaultValue;
+    }
+    
     return values[key];
 }
 
 int Config::GetInt(
-    const std::string& key
+    const std::string& key,
+    int defaultValue
 )
 {
 
-    std::cout
-        << "GetInt Request: "
-        << key
-        << " value : "
-        << values[key]
-        << std::endl;
+    if (values.find(key) == values.end())
+    {
+        return defaultValue;
+    }
+    
+    if (values[key].empty())
+    {
+        return defaultValue;
+    }
 
     return std::stoi(
         values[key]
@@ -96,9 +111,20 @@ int Config::GetInt(
 }
 
 bool Config::GetBool(
-    const std::string& key
+    const std::string& key,
+    bool defaultValue
 )
 {
+    if (values.find(key) == values.end())
+    {
+        return defaultValue;
+    }
+    
+    if (values[key].empty())
+    {
+        return defaultValue;
+    }
+
     return values[key] == "true";
 }
 
