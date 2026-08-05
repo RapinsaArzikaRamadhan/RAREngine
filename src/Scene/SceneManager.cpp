@@ -22,6 +22,10 @@ void SceneManager::Render()
     {
         currentScene->Render();
     }
-    
+}
+
+Scene* SceneManager::GetCurrentScene()
+{
+    return currentScene;
 }
 } // namespace RAREngine

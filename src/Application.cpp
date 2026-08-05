@@ -5,10 +5,13 @@
 
 namespace RAREngine
 {
-    
+
 Application::Application()
 { 
-
+    scenemanager.SetScene(
+        &menuscene
+    );
+    TraceLog(LOG_INFO, "%p", scenemanager.GetCurrentScene());
 }
 
 Application::~Application()
@@ -18,14 +21,12 @@ Application::~Application()
 
 void Application::Update()
 {
-
-    menuscene.Update();
-
+    scenemanager.Update();
 }
 
 void Application::Render()
 {
-    menuscene.Render();
+    scenemanager.Render();
 }
 
 }
