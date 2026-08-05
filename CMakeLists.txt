@@ -14,6 +14,7 @@ add_executable(RAREngine
     src/Core/Time.cpp
     src/Core/Config.cpp
     src/Core/Input.cpp
+    src/Application.cpp
 )
 
 target_include_directories(RAREngine PRIVATE
