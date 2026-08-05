@@ -15,6 +15,8 @@ add_executable(RAREngine
     src/Core/Config.cpp
     src/Core/Input.cpp
     src/Application.cpp
+    src/Scene/Scene.cpp
+    src/Scene/MenuScene.cpp
 )
 
 target_include_directories(RAREngine PRIVATE
