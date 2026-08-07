@@ -19,6 +19,7 @@ add_executable(RAREngine
     src/Scene/MenuScene.cpp
     src/Scene/SceneManager.cpp
     src/Scene/DummyScene.cpp
+    src/Scene/MainScene.cpp
 )
 
 target_include_directories(RAREngine PRIVATE

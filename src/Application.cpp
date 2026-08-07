@@ -21,16 +21,6 @@ Application::~Application()
 void Application::Update()
 {
     sceneManager.Update();
-
-    if (Input::IsKeyPressed(KEY_ONE))
-    {
-        sceneManager.SetScene(SceneID::Dummy);
-    };
-
-    if (Input::IsKeyPressed(KEY_GRAVE))
-    {
-        sceneManager.SetScene(SceneID::Menu);
-    };
 }
 
 void Application::Render()

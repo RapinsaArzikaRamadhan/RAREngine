@@ -13,6 +13,9 @@ void SceneManager::SetScene(SceneID id)
     case SceneID::Dummy:
         currentScene = &dummyScene;
         break;
+    case SceneID::Main:
+        currentScene = &mainScene;
+        break;
     }
 
     currentScene->SetSceneManager(this);

@@ -1,21 +1,21 @@
-#include "RAREngine/Scene/DummyScene.hpp"
+#include "RAREngine/Scene/MainScene.hpp"
 #include "RAREngine/Scene/SceneManager.hpp"
 #include "RAREngine/Core/Input.hpp"
 #include <raylib.h>
 
 namespace RAREngine
 {
-DummyScene::DummyScene()
+MainScene::MainScene()
 {
 
 }
 
-DummyScene::~DummyScene()
+MainScene::~MainScene()
 {
 
 }
 
-void DummyScene::Update()
+void MainScene::Update()
 {
     if (Input::IsKeyPressed(KEY_SPACE))
     {
@@ -26,24 +26,25 @@ void DummyScene::Update()
     {
         sceneManager->SetScene(SceneID::Menu);
     };
+
 }
 
-void DummyScene::Render()
+void MainScene::Render()
 {
     DrawText(
-    "this is the dummy realm",
+    "Welcome to the MainScene",
     350,
     150,
     30,
-    RED
+    YELLOW
     );
 
     DrawText(
-    "Press ` to back to menuscene",
+    "Press ` to back to menuscene and 2 to go to the dummy scene",
     450,
     200,
     10,
-    RED
+    YELLOW
     );
 }
 } // namespace RAREngine
