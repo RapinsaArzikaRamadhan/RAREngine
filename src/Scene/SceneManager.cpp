@@ -3,9 +3,21 @@
 
 namespace RAREngine
 {
-void SceneManager::SetScene(Scene* scene)
+void SceneManager::SetScene(SceneID id)
 {
-    currentScene = scene;
+    switch (id)
+    {
+    case SceneID::Menu:
+        currentScene = &menuScene;
+        break;
+    case SceneID::Dummy:
+        currentScene = &dummyScene;
+        break;
+    }
+
+    currentScene->SetSceneManager(this);
+    TraceLog(LOG_INFO, "%p", currentScene);
+
 }
 
 void SceneManager::Update()

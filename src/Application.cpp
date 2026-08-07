@@ -8,10 +8,9 @@ namespace RAREngine
 
 Application::Application()
 { 
-    scenemanager.SetScene(
-        &menuscene
+    sceneManager.SetScene(
+        SceneID::Menu
     );
-    TraceLog(LOG_INFO, "%p", scenemanager.GetCurrentScene());
 }
 
 Application::~Application()
@@ -21,12 +20,22 @@ Application::~Application()
 
 void Application::Update()
 {
-    scenemanager.Update();
+    sceneManager.Update();
+
+    if (Input::IsKeyPressed(KEY_ONE))
+    {
+        sceneManager.SetScene(SceneID::Dummy);
+    };
+
+    if (Input::IsKeyPressed(KEY_GRAVE))
+    {
+        sceneManager.SetScene(SceneID::Menu);
+    };
 }
 
 void Application::Render()
 {
-    scenemanager.Render();
+    sceneManager.Render();
 }
 
 }

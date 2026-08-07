@@ -23,4 +23,9 @@ void Scene::Render()
     
 }
 
+void Scene::SetSceneManager(SceneManager* manager)
+{
+    sceneManager = manager;
+}
+
 } // namespace RAREngine
